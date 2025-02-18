@@ -8,7 +8,7 @@ cp -r screen-rotate@shyzus.github.io ~/.local/share/gnome-shell/extensions
 gnome-extensions enable screen-rotate@shyzus.github.io
 
 # install accel-sensor-bridge
-wget https://github.com/imrisaac/iio_accel_screen_rotation/blob/main/accel-sensor-bridge.deb
+wget https://github.com/imrisaac/iio_accel_screen_rotation/raw/refs/heads/main/accel-sensor-bridge.deb
 sudo apt-get install -y ./accel-sensor-bridge.deb
 rm -rf accel-sensor-bridge.deb
 
