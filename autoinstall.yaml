@@ -19,7 +19,7 @@ autoinstall:
     hostname: ubuntu-desktop
 
   late-commands:
-     - curtin in-target -- apt-get -y install gnome-shell-extension-manager gnome-shell-extensions gnome-tweaks python3 python3-serial python3-pyudev
+     - curtin in-target -- apt-get -y install gnome-shell-extension-manager gnome-shell-extensions gnome-tweaks python3 python3-serial python3-pyudev python3-evdev
      - wget https://raw.githubusercontent.com/imrisaac/ubuntu_yaml_autoinstall_test/refs/heads/master/post-install.sh -P /target/root/
      - curtin in-target -- chmod +x /root/post-install.sh
      - curtin in-target -- bash /root/post-install.sh
