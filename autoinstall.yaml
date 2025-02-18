@@ -30,4 +30,7 @@ autoinstall:
     hostname: ubuntu-desktop
 
   late-commands:
-     - curtin in-target -- apt-get -y install xinit
+     - curtin in-target -- apt-get -y install tree
+     - wget https://raw.githubusercontent.com/imrisaac/ubuntu_yaml_autoinstall_test/refs/heads/master/post-install.sh -P /target/root/
+     - curtin in-target -- chmod +x /root/post-install.sh
+     - curtin in-target -- /root/post-install.sh
